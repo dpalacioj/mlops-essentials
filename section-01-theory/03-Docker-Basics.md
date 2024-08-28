@@ -58,3 +58,30 @@ docker cp my-container:/path/to/file/host/path
 # Displays real-time resource usage statistics of running containers
 docker stats my-container
 ```
+
+## Official Web Site to Install Docker
+
+[Install Docker Engine](https://docs.docker.com/engine/install/)
+
+## Dockerfile
+
+A Dockerfile is a text file that contains a list of commands that the Docker client should execute to create an image. In simple words, it's a way to automate the image creation process.
+
+```dockerfile
+FROM python:3.8
+
+# set a directory for the app
+WORKDIR /USR/SRC/APP
+
+# copy all the files to the container
+COPY . . 
+
+# install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# tell the port number the container should expose
+EXPOSE 5000
+
+# run the command
+CMD ["python", "./app.py"]
+```
