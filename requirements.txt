@@ -1,0 +1,6 @@
+mlflow==2.7.1
+ipykernel
+plotly
+nbformat
+tranformers
+torch
